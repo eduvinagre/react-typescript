@@ -1,3 +1,5 @@
+import { SelectedPage } from "@/shared/types";
+import HText from "@/shared/HText";
 import {
   HomeModernIcon,
   UserGroupIcon,
@@ -13,7 +15,9 @@ const Benefits = (setSelectedPage: Props) => {
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
-        <div></div>
+        <div>
+          <HText>MORE THAN JUST A GYM</HText>
+        </div>
       </motion.div>
     </section>
   );
