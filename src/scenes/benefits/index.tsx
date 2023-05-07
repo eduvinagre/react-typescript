@@ -6,8 +6,8 @@ import {
 
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
-const Benefits = (props: Props) => {
-  return <div>Benefits</div>;
+const Benefits = (setSelectedPage: Props) => {
+  return <section id="benefits"></section>;
 };
 
 export default Benefits;
