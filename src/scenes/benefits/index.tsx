@@ -7,7 +7,9 @@ import {
 type Props = { setSelectedPage: (value: SelectedPage) => void };
 
 const Benefits = (setSelectedPage: Props) => {
-  return <section id="benefits"></section>;
+  return (
+    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20"></section>
+  );
 };
 
 export default Benefits;
