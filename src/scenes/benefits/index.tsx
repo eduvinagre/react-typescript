@@ -1,4 +1,4 @@
-import { SelectedPage } from "@/shared/types";
+import { BenefitType, SelectedPage } from "@/shared/types";
 import HText from "@/shared/HText";
 import {
   HomeModernIcon,
@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
-const benefits: Array<Object> = [
+const benefits: Array<BenefitType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
@@ -28,9 +28,11 @@ const benefits: Array<Object> = [
   },
 ];
 
-type Props = { setSelectedPage: (value: SelectedPage) => void };
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
-const Benefits = (setSelectedPage: Props) => {
+const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div
@@ -47,8 +49,14 @@ const Benefits = (setSelectedPage: Props) => {
 
         {/* benefits */}
         <div className="mt-5 items-center justify-between gap-8 md:flex">
-          {benefits.map((benefit) => (
-            <Benefit />
+          {benefits.map((benefit: BenefitType) => (
+            <Benefit
+              key={benefit.title}
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+              setSelectedPage={setSelectedPage}
+            />
           ))}
         </div>
       </motion.div>
