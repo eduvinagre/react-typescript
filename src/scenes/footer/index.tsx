@@ -22,7 +22,11 @@ const Footer = (props: Props) => {
           <p className="my-5">Et gravida id et etiam</p>
           <p>Ullamcorper vivamus</p>
         </div>
-        <div></div>
+        <div className="mt-16 basis-1/4 md:mt-0">
+          <h4 className="font-bold">Contact Us</h4>
+          <p className="my-5">Tempus metus mattis risus volutpat egestas.</p>
+          <p>(31)9999-9999</p>
+        </div>
       </div>
     </footer>
   );
