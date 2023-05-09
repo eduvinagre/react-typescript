@@ -38,7 +38,7 @@ Footer Section
 
 ### Deploy
 
-[https://real-sate-react.vercel.app](https://react-typescript-gymhomepage.vercel.app/)
+https://react-typescript-gymhomepage.vercel.app/
 
 ### The challenge
 
